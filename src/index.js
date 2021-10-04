@@ -175,10 +175,10 @@ const projectController = (function () {
         eventArgs.setIsSelected(true); //Select
         publish("renderProjectView", projects);
         publish("renderButtonsView", projects);
-        if(eventArgs.getName() == "Today"){
+        if (eventArgs.getName() == "Today") {
             const btnTask = document.querySelector('.new-task');
             btnTask.style.display = "none";
-        }        
+        }
     });
     subscribe("deleteSelected", function (project) {
         let indexToDelete = projects.indexOf(project);
@@ -291,11 +291,11 @@ const taskController = (function () {
             });
             if (project.getId() == "project1") {
                 project.setAllTasks(allTasks);
-            } else if(project.getId() == "project2") {
-                const today = format(new Date(),'dd/MM/yy');
+            } else if (project.getId() == "project2") {
+                const today = format(new Date(), 'dd/MM/yy');
                 const todayTasks = allTasks.filter(x => x.getTime() == today);
-                project.setAllTasks(todayTasks);  
-            }            
+                project.setAllTasks(todayTasks);
+            }
         }
         publish("renderTaskView", project);
     });
