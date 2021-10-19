@@ -1,7 +1,38 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Urbanist', sans-serif;
+    font-family: "Urbanist", sans-serif;
+}
+
+#user-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 22px;
+    width: 100%;
+    right: 0;
+    padding-left: 10px;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+#user-container #user-pic {
+    top: -3px;
+    position: relative;
+    display: inline-block;
+    background-image: url("/images/profile_placeholder.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+    border-radius: 20px;
+}
+
+#user-container #user-name {
+    font-size: 16px;
+    line-height: 36px;
+    padding-right: 10px;
+    padding-left: 20px;
 }
 
 .nav-menu {
@@ -34,7 +65,7 @@ body {
     display: flex;
     margin: 0px 30px 0px auto;
     padding: 2px 4px 2px 4px;
-    background-color: #E6EBF1;
+    background-color: #e6ebf1;
     border-radius: 8px;
     height: fit-content;
     align-items: center;
@@ -64,11 +95,11 @@ body {
 }
 
 .material-icons.yellow {
-    color: #FCB040;
+    color: #fcb040;
 }
 
 .material-icons.green {
-    color: #29D884;
+    color: #29d884;
 }
 
 .content {
@@ -128,8 +159,8 @@ button {
 }
 
 .selected {
-    border: 1px solid #FCB040;
-    color: #FCB040;
+    border: 1px solid #fcb040;
+    color: #fcb040;
     font-weight: bold;
     border-radius: 8px;
     background-color: rgb(252, 176, 64, 0.1);
@@ -163,7 +194,7 @@ button {
 .new-task {
     margin-top: 20px;
     font-size: 22px;
-    background-color: #FCB040;
+    background-color: #fcb040;
     color: white;
     padding: 3px 8px 3px 8px;
     border-radius: 7px;
@@ -172,20 +203,22 @@ button {
 .time-task {
     margin-left: 10px;
     background-color: white;
-    border: 1px solid #FCB040;
+    border: 1px solid #fcb040;
     border-radius: 5px;
-    color: #FCB040;
+    color: #fcb040;
 }
 
-.editBtn, .deleteBtn {
-    background-color: #FCB040;
+.editBtn,
+.deleteBtn {
+    background-color: #fcb040;
     padding: 0px 5px 0px 5px;
     margin: 0px 0px 0px 10px;
     color: white;
 }
 
-.editBtnProj, .deleteBtnProj {
-    background-color: #FCB040;
+.editBtnProj,
+.deleteBtnProj {
+    background-color: #fcb040;
     padding: 0px 5px 0px 5px;
     margin: 0px 0px 0px 5px;
     color: white;
@@ -194,6 +227,7 @@ button {
 .done {
     text-decoration: line-through;
 }
+
 
 /* The Modal (background) */
 
@@ -215,10 +249,9 @@ button {
     background-color: rgb(0, 0, 0);
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-
-    
     /* Black w/ opacity */
 }
+
 
 /* Modal Content/Box */
 
@@ -232,11 +265,11 @@ button {
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    font-family: 'Urbanist', sans-serif;
-
+    font-family: "Urbanist", sans-serif;
     border-radius: 10px;
     /* Could be more or less, depending on screen size */
 }
+
 
 /* The Close Button */
 
@@ -247,7 +280,8 @@ button {
     font-weight: bold;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -257,20 +291,20 @@ button {
     resize: vertical;
 }
 
-.submit{
+.submit {
     margin-top: 20px;
-    background-color: #FCB040;
+    background-color: #fcb040;
     color: white;
     padding: 3px 8px 3px 8px;
     border-radius: 7px;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
 }
 
-.projectBtnSelect{
+.projectBtnSelect {
     width: 70%;
 }
 
@@ -333,8 +367,8 @@ form{
     .selected {
         margin: 5px 0px 0px 0px;
         padding: 3px 7px 3px 7px;
-        border: 1px solid #FCB040;
-        color: #FCB040;
+        border: 1px solid #fcb040;
+        color: #fcb040;
         font-weight: bold;
         border-radius: 8px;
         background-color: rgb(252, 176, 64, 0.1);
@@ -351,8 +385,9 @@ form{
         width: 30%;
         font-size: 20px;
     }
-    .editBtnProj, .deleteBtnProj {
-        background-color: #FCB040;
+    .editBtnProj,
+    .deleteBtnProj {
+        background-color: #fcb040;
         padding: 0px 5px 0px 5px;
         margin: 0px 0px 0px 5px;
         color: white;

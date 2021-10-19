@@ -1,0 +1,396 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Urbanist", sans-serif;
+}
+
+.nav-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom: 1px solid rgba(230, 235, 241, 1);
+    height: 70px;
+    align-items: center;
+}
+
+.bars {
+    background: none;
+    border: none;
+    margin-left: 15px;
+}
+
+.logo {
+    margin-left: 15px;
+}
+
+.logo img {
+    height: 90px;
+}
+
+.task-counter {
+    display: flex;
+    margin: 0px 30px 0px auto;
+    padding: 2px 4px 2px 4px;
+    background-color: #e6ebf1;
+    border-radius: 8px;
+    height: fit-content;
+    align-items: center;
+    border: none;
+}
+
+.task-logo {
+    margin: 3px 6px 3px 6px;
+}
+
+.task-elements {
+    margin: 0px 10px 3px 6px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.material-icons.md-12 {
+    font-size: 12px;
+}
+
+.material-icons.md-14 {
+    font-size: 14px;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.yellow {
+    color: #fcb040;
+}
+
+.material-icons.green {
+    color: #29d884;
+}
+
+.content {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-projects {
+    background-color: white;
+    display: flex;
+    height: 60px;
+    border-bottom: 1px solid rgba(230, 235, 241, 1);
+    align-items: center;
+    padding-left: 20px;
+}
+
+.addProject {
+    margin-left: 24px;
+}
+
+.nav-projects-title {
+    display: flex;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.nav-projects-title span {
+    display: flex;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+    box-sizing: border-box;
+    background: none;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+.option {
+    margin: 10px 30px 10px 5px;
+    padding: 3px 7px 3px 7px;
+    border: 1px solid rgba(230, 235, 241, 1);
+    border-radius: 8px;
+}
+
+.selected {
+    border: 1px solid #fcb040;
+    color: #fcb040;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgb(252, 176, 64, 0.1);
+}
+
+.project-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 38px;
+}
+
+.project-tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.list-tasks {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    white-space: normal;
+}
+
+.list-tasks label {
+    margin-bottom: 20px;
+}
+
+.new-task {
+    margin-top: 20px;
+    font-size: 22px;
+    background-color: #fcb040;
+    color: white;
+    padding: 3px 8px 3px 8px;
+    border-radius: 7px;
+}
+
+.time-task {
+    margin-left: 10px;
+    background-color: white;
+    border: 1px solid #fcb040;
+    border-radius: 5px;
+    color: #fcb040;
+}
+
+.editBtn,
+.deleteBtn {
+    background-color: #fcb040;
+    padding: 0px 5px 0px 5px;
+    margin: 0px 0px 0px 10px;
+    color: white;
+}
+
+.editBtnProj,
+.deleteBtnProj {
+    background-color: #fcb040;
+    padding: 0px 5px 0px 5px;
+    margin: 0px 0px 0px 5px;
+    color: white;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 40% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Urbanist", sans-serif;
+    border-radius: 10px;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.textArea {
+    resize: vertical;
+}
+
+.submit {
+    margin-top: 20px;
+    background-color: #fcb040;
+    color: white;
+    padding: 3px 8px 3px 8px;
+    border-radius: 7px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectBtnSelect {
+    width: 70%;
+}
+
+#user-container {
+    display: flex;
+    position: absolute;
+    right: 150px;
+}
+
+#user-container #user-pic {
+    top: -3px;
+    position: relative;
+    display: inline-block;
+    background-image: url("/images/profile_placeholder.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+    border-radius: 20px;
+}
+
+#user-container #user-name {
+    font-size: 16px;
+    line-height: 36px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+.picpic {
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 870px) {
+    .content {
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-template-rows: 50px auto;
+        grid-template-areas: "menu title" "menu content";
+        margin: 70px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+    .nav-projects {
+        grid-area: menu;
+        border-right: 1px solid rgba(230, 235, 241, 1);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding-left: 0px;
+        top: 0px;
+    }
+    .addProject {
+        margin-left: 15px;
+        margin-top: 3px;
+    }
+    .nav-projects-title {
+        height: 49px;
+        display: flex;
+        align-items: center;
+        padding-left: 46px;
+        font-weight: bold;
+        font-size: 24px;
+        margin-right: 0px;
+        border-bottom: 1px solid rgba(230, 235, 241, 1);
+    }
+    .options {
+        border-top: 1px solid rgba(230, 235, 241, 1);
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .nav-projects-title span {
+        display: flex;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    .newProject {
+        margin: 5px 0px 0px 0px;
+        padding: 3px 7px 3px 7px;
+        border: none;
+        border-radius: 0px;
+    }
+    .option {
+        margin: 5px 0px 0px 0px;
+        padding: 3px 7px 3px 7px;
+        border: none;
+        border-radius: 0px;
+    }
+    .selected {
+        margin: 5px 0px 0px 0px;
+        padding: 3px 7px 3px 7px;
+        border: 1px solid #fcb040;
+        color: #fcb040;
+        font-weight: bold;
+        border-radius: 8px;
+        background-color: rgb(252, 176, 64, 0.1);
+    }
+    .project-title {
+        grid-area: title;
+        display: flex;
+        margin-top: 8px;
+        font-size: 28px;
+        border-bottom: 1px solid rgba(230, 235, 241, 1);
+    }
+    .modal-content {
+        margin: 10% auto;
+        width: 30%;
+        font-size: 20px;
+    }
+    .editBtnProj,
+    .deleteBtnProj {
+        background-color: #fcb040;
+        padding: 0px 5px 0px 5px;
+        margin: 0px 0px 0px 5px;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 870px) {}
